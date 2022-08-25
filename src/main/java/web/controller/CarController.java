@@ -10,13 +10,13 @@ import web.service.CarServiceImpl;
 
 @Controller
 public class CarController {
-//    private final CarService carService;
-//
-//    public CarController(CarService carService) {
-//        this.carService = carService;
-//    }
+    private final CarService carService;
 
-    CarServiceImpl carService = new CarServiceImpl();
+    public CarController(CarService carService) {
+        this.carService = carService;
+    }
+
+    /*CarServiceImpl carService = new CarServiceImpl();*/
 
     @GetMapping("/cars")
     public String getCar(@RequestParam(value = "count", defaultValue = "0") int id, ModelMap model) {
