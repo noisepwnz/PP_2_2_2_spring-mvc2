@@ -16,7 +16,6 @@ public class CarController {
         this.carService = carService;
     }
 
-    /*CarServiceImpl carService = new CarServiceImpl();*/
 
     @GetMapping("/cars")
     public String getCar(@RequestParam(value = "count", defaultValue = "0") int id, ModelMap model) {

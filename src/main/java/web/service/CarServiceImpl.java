@@ -14,12 +14,8 @@ public class CarServiceImpl implements  CarService {
         this.carDao = carDao;
     }
 
-    /*CarDaoImpl carDao = new CarDaoImpl();*/
 
     public List<Car> getCarList(int i) {
-        if (i <= 0) {
-            return carDao.getCars();
-        }
-        return carDao.getCars().stream().limit(i).toList();
+        return carDao.getCarList(i);
     }
 }
